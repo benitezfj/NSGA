@@ -1,21 +1,18 @@
 #Test "Permutation"
 #motsp
 ##City 1
-kroA100 <- read.table("kroA100.txt", header = TRUE)
-kroA100 <- as.matrix(kroA100[,2:3])
-kroA100dist <- dist(kroA100, method = "euclidean", diag = TRUE, upper = TRUE)
+city1 <- as.matrix(rmoo::kroA100)
+kroA100dist <- dist(city1, method = "euclidean", diag = TRUE, upper = TRUE)
 kroA100dist <- as.matrix(kroA100dist)
 
 ##City 2
-kroB100 <- read.table("kroB100.txt", header = TRUE)
-kroB100 <- as.matrix(kroB100[,2:3])
-kroB100dist <- dist(kroB100, method = "euclidean", diag = TRUE, upper = TRUE)
+city2 <- as.matrix(rmoo::kroB100)
+kroB100dist <- dist(city2, method = "euclidean", diag = TRUE, upper = TRUE)
 kroB100dist <- as.matrix(kroB100dist)
 
 ##City 3
-kroC100 <- read.table("kroC100.txt", header = TRUE)
-kroC100 <- as.matrix(kroC100[,2:3])
-kroC100dist <- dist(kroC100, method = "euclidean", diag = TRUE, upper = TRUE)
+city3 <- as.matrix(rmoo::kroC100)
+kroC100dist <- dist(city3, method = "euclidean", diag = TRUE, upper = TRUE)
 kroC100dist <- as.matrix(kroC100dist)
 
 distArray <- array(NA, dim=c(nrow(kroA100dist), ncol(kroA100dist), 3))
